@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
 </head>
 <body>
-<div id="speechContainer">
+<div id="greeting">
     <h1>Welcome to Santa's Secret</h1>
     <form method="post" enctype="multipart/form-data">
         <input type="submit" id="submitButton" value="Choose a friend"/>
     </form>
 
     {% if transcript != "" %}
-        <div id="speechTranscriptContainer">
+        <div id="TranscriptContainer">
             <h1>Merry Christmas !</h1>
             <p id="speechText"> You have  {{ transcript }}</p>
         </div>
