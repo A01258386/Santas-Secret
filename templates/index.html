@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+</head>
+<body>
+<div id="speechContainer">
+    <h1>Welcome to Santa's Secret</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="submit" id="submitButton" value="Choose a friend"/>
+    </form>
+
+    {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+            <h1>Merry Christmas !</h1>
+            <p id="speechText"> You have  {{ transcript }}</p>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
+
+    
+
+
