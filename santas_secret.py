@@ -1,6 +1,6 @@
 #Santa's Secret
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-import random,time
+from flask import Flask, render_template, request
+import random
 
 app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
